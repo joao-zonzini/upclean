@@ -1,5 +1,7 @@
 # upclean 
 
+Nas linhas 14 e 16 do código você deve mudar onde você quer salvar o log das atualizações.
+
 Sugiro colocar essa programa na pasta ```~/bin``` e configurar o crontab:
 
 ```shell 
@@ -12,7 +14,7 @@ e colocar o comando para rodar a cada meia hora assim:
 
 ```shell
 
-*/30 * * * * /home/nomedousuario/bin/upclean
+*/30 * * * * /home/nome_do_usuario/bin/upclean
 
 ```
 
