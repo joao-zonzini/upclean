@@ -4,7 +4,7 @@ Sugiro colocar essa programa na pasta ```~/bin``` e configurar o crontab:
 
 ```shell 
 
-crontab -e
+$ crontab -e
 
 ```
 
