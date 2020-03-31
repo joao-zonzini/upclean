@@ -1,0 +1,37 @@
+#!/bin/bash
+
+sudo echo "~~~~~UPDATE~~~~~"
+
+sudo apt update -y
+
+echo "~~~~~UPGRADE-LIST~~~~~"
+
+sudo apt list --upgradeable -a
+
+echo "~~~~~UPGRADE~~~~~"
+
+if sudo apt upgrade -y; then
+	echo "$(date "+%d/%m/%Y %T") - Atualizacao bem-sucedida" >> /home/jaz/upclean.log
+else 
+	echo "$(date "+%d/%m/%Y %T") - Atualizacao Falhada" >> /home/jaz/upclean.log
+fi
+
+echo "~~~~~DIST-UPDATE~~~~~"
+
+sudo apt-get dist-upgrade -y
+
+echo "~~~~~CLEAN~~~~~"
+
+sudo apt-get clean -y
+
+echo "~~~~~AUTOREMOVE~~~~~"
+
+sudo apt autoremove -y
+
+echo "~~~~~AUTOREMOVE~~~~~"
+
+sudo apt-get autoremove --purge
+
+echo "~~~~~THUMBS~~~~~"
+
+sudo rm -rf ~/.cache/thumbnails
