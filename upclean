@@ -1,5 +1,7 @@
 #!/bin/bash
 
+usuario=$(whoami)
+
 sudo echo "~~~~~UPDATE~~~~~"
 
 sudo apt update -y
@@ -11,9 +13,9 @@ sudo apt list --upgradeable -a
 echo "~~~~~UPGRADE~~~~~"
 
 if sudo apt upgrade -y; then
-	echo "$(date "+%d/%m/%Y %T") - Atualizacao bem-sucedida" >> /home/nome_do_usuario/upclean.log
+	echo "$(date "+%d/%m/%Y %T") - Atualizacao bem-sucedida" >> /home/"$usuario"/upclean.log
 else 
-	echo "$(date "+%d/%m/%Y %T") - Atualizacao Falhada" >> /home/nome_do_usuario/upclean.log
+	echo "$(date "+%d/%m/%Y %T") - Atualizacao Falhada" >> /home/"$usuario"/upclean.log
 fi
 
 echo "~~~~~DIST-UPDATE~~~~~"
