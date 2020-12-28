@@ -1,7 +1,5 @@
 # upclean 
 
-Nas linhas 14 e 16 do código você deve mudar onde você quer salvar o log das atualizações.
-
 Sugiro colocar essa programa na pasta ```~/bin``` e configurar o crontab:
 
 ```shell 
